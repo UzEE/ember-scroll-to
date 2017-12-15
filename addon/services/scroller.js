@@ -37,7 +37,8 @@ export default Em.Service.extend({
     // and if the scrollable container is not the document,
     // we need to normalize the target elements top based on the top and current scrolled position of the scrollable
     if (this.get('scrollable').offset().top) {
-      return this.get('scrollable').scrollTop() - this.get('scrollable').offset().top;
+      // return this.get('scrollable').scrollTop() - this.get('scrollable').offset().top;
+      return - this.get('scrollable').offset().top;
     } else {
       return 0;
     }
